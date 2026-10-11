@@ -25,7 +25,7 @@
                    page.blocks[] is a list of content blocks. Block types:
                      { type:'text',    text:'…' }
                      { type:'heading', text:'…' }
-                     { type:'stats',   items:[{n:'3.54', label:'CGPA'} …] }
+                     { type:'stats',   items:[{n:'3.56', label:'CGPA'} …] }
                      { type:'entries', items:[{ title, meta, tag,
                                                 points:['…','…'],
                                                 links:[{label,url}] }] }
@@ -42,7 +42,7 @@ window.SITE = {
   /* -------- the central "you" neuron -------------------------------------- */
   profile: {
     name: 'Donald A.',
-    role: 'ML Researcher · Engineer',
+    role: 'Interpretability Researcher · Engineer',
     location: 'Colombo, Sri Lanka',
     photoId: 'hero-portrait',          // drag-drop headshot slot id (keep as is)
     links: {
@@ -51,12 +51,12 @@ window.SITE = {
       researchgate: 'https://www.researchgate.net/profile/Donald-Aadithiyan',
       email: 'donaldaadithiyanwork@gmail.com',
     },
-    tagline: 'Understanding how AI systems decide, fail under uncertainty, and generalize.',
+    tagline: 'Recovering what neural networks encode internally but never express — toward safer, better-aligned models.',
 
     // the "Hi there!" greeting card shown next to your photo neuron
     greeting: {
       hi: 'Hi there! I\'m',
-      blurb: 'Welcome to my universe — a final-year CS undergrad at the University of Moratuwa, I ship apps, chase gradients, and somehow still believe interpretability will save us all.',
+      blurb: 'Welcome to my universe — a final-year CS undergrad at the University of Moratuwa working on mechanistic interpretability, I ship apps, chase gradients, and somehow still believe interpretability will save us all.',
       email: 'donaldaadithiyanwork@gmail.com',
     },
   },
@@ -73,28 +73,39 @@ window.SITE = {
       col: 1,
       summary: {
         stat: '2',
-        statLabel: 'active threads',
-        keywords: ['epistemic uncertainty', 'RL world models', 'interpretability', 'DreamerV3'],
+        statLabel: 'papers · 2 accepted at IJCAI-ECAI',
+        keywords: ['mechanistic interpretability', 'linear probing', 'causal tracing', 'DreamerV3'],
         points: [
-          'Epistemic uncertainty in RL world models',
-          'Interpretability of DreamerV3 hidden states',
+          'Mechanistic interpretability — probing, steering, causal tracing',
+          'Xu Lab (CMU & Harvard Med) — MRI deep learning',
         ],
       },
       page: {
         kicker: '01 — Research',
         title: 'Research',
-        lede: 'I study how AI systems make decisions, fail under uncertainty, and generalize — reinforcement learning, model-based RL, interpretability, and uncertainty quantification. Three threads are active right now.',
+        lede: 'My research centers on mechanistic interpretability — using linear probing, activation editing, and causal tracing to recover latent features that networks encode internally but never express behaviorally. I\'m interested in how models reason and why they fail, and I\'m beginning to extend this work to vision-language models.',
         blocks: [
           { type: 'stats', items: [
-            { n: '2', label: 'peer-reviewed' },
-            { n: '1', label: 'under review · ICML\'26' },
-            { n: '1', label: 'working paper' },
+            { n: '3', label: 'peer-reviewed' },
+            { n: '2', label: 'accepted · IJCAI-ECAI 2026' },
+            { n: '2', label: 'working papers' },
           ]},
-          { type: 'heading', text: 'Active research threads' },
+          { type: 'heading', text: 'Research & threads' },
           { type: 'entries', items: [
             {
-              title: 'Epistemic Uncertainty in RL World Models',
-              meta: 'Independent Research · Phase 1 & 2',
+              title: 'Xu Lab — Carnegie Mellon University & Harvard Medical School',
+              meta: 'Research Collaborator · Jul 2026 – Present',
+              tag: 'Medical imaging · Deep learning',
+              points: [
+                'Building a deep learning pipeline with Dr. Xiangrui Zeng to improve temporal consistency of cortical thickness measurements across longitudinal MRI timepoints.',
+                'Handling ADNI preprocessing and MRI–PET integration, with a focus on layer-specific cortical segmentation (supragranular and infragranular).',
+              ],
+              links: [],
+            },
+            {
+              title: 'Reading the Room: Implicit Confusion Encoding in Recurrent World Model States',
+              meta: 'GlobalSouthAI D&I Workshop, IJCAI-ECAI 2026 · Accepted',
+              tag: 'Interpretability · Model-based RL',
               tag: 'Interpretability · Model-based RL',
               points: [
                 'Probed whether DreamerV3\'s recurrent hidden state hₜ linearly encodes epistemic uncertainty without external OOD labels; the confusion signal is orthogonal to input novelty.',
@@ -115,13 +126,12 @@ window.SITE = {
               links: [],
             },
             {
-              title: 'Beyond Point Prediction: Multi-Horizon Rare-Event Forecasting',
-              meta: 'Submitted to AI for Forecasting Workshop, ICML 2026 · under review',
+              title: 'Reaching the Tail: Calibration Diversity Drives Conformal Coverage under Data Scarcity',
+              meta: 'GlobalSouthAI D&I Workshop, IJCAI-ECAI 2026 · Accepted',
               tag: 'Forecasting · Conformal inference',
               points: [
-                'Built a two-stage decoupled pipeline: hybrid Prophet/ARIMA with XGBoost residual correction, then a stacking-ensemble RegressorChain conditioning longer-horizon recession probabilities on shorter ones.',
-                'Novel finding: calibration-set rare-event class composition — not size — determines conformal interval validity under temporal distribution shift.',
-                'Horizon-conditional SHAP reveals feature importance shifting from current-state to forward-looking signals across horizons.',
+                'Finding: calibration-set rare-event class composition — not size — determines conformal interval validity under temporal distribution shift.',
+                'Built on a two-stage multi-horizon rare-event forecasting pipeline with adaptive and Mondrian conformal inference.',
               ],
               links: [],
             },
@@ -129,24 +139,31 @@ window.SITE = {
           { type: 'heading', text: 'Publications' },
           { type: 'entries', items: [
             {
+              title: 'What Drives the Behavior?: A General Interpretability Pipeline for Finding Causal Features Behind Multi-Token Language-Model Behaviors',
+              meta: 'Working paper (not peer-reviewed)',
+              tag: 'WP.1 · Working paper',
+              points: [],
+              links: [],
+            },
+            {
+              title: 'Reading the Room: Implicit Confusion Encoding in Recurrent World Model States',
+              meta: 'GlobalSouthAI D&I Workshop, IJCAI-ECAI 2026 · Bremen, Germany · Accepted (Presentation)',
+              tag: 'W.1 · Workshop',
+              points: ['Donald Aadithiyan (2026).'],
+              links: [],
+            },
+            {
+              title: 'Reaching the Tail: Calibration Diversity Drives Conformal Coverage under Data Scarcity',
+              meta: 'GlobalSouthAI D&I Workshop, IJCAI-ECAI 2026 · Bremen, Germany · Accepted (Presentation)',
+              tag: 'W.2 · Workshop',
+              points: ['Donald Aadithiyan (2026).'],
+              links: [],
+            },
+            {
               title: 'Predicting YouTube Video Initial Engagement Using Ensemble Machine Learning Techniques',
               meta: 'Intl. Conference in Data Science 2025 · Univ. of Colombo',
               tag: 'C.1 · Conference',
               points: ['Donald Aadithiyan, Birunthaban Rajendram, Parishith Ragumar (2025).'],
-              links: [],
-            },
-            {
-              title: 'Beyond Point Prediction: Inter-Temporal Conditioning and Conformal Uncertainty for Multi-Horizon Rare-Event Forecasting',
-              meta: 'AI for Forecasting Workshop, ICML 2026 · Under Review',
-              tag: 'W.1 · Workshop',
-              points: ['Donald Aadithiyan (2026). Decision pending.'],
-              links: [],
-            },
-            {
-              title: 'When Better Models Predict Less: KAN Decoder Curvature as a Regime Attribution Signal on the JSE',
-              meta: 'Differential Capital, Johannesburg · Working paper',
-              tag: 'I.1 · In progress',
-              points: ['Donald Aadithiyan (2026).'],
               links: [],
             },
           ]},
@@ -241,25 +258,34 @@ window.SITE = {
         stat: '3',
         statLabel: 'roles',
         points: [
+          'Xu Lab (CMU & Harvard Med) — Research Collaborator',
           'Differential Capital — DS Intern & Research',
-          'Lightspeed Labs — PM & Full-Stack',
           'Upwork — Rising Talent (Top 15%)',
         ],
       },
       page: {
         kicker: '03 — Experience',
         title: 'Experience',
-        lede: 'Where I\'ve worked — research collaboration, product delivery, and leading peer teams.',
+        lede: 'Where I\'ve worked — research collaboration, quantitative ML, product delivery, and leading peer teams.',
         blocks: [
           { type: 'entries', items: [
             {
+              title: 'Xu Lab — Carnegie Mellon University & Harvard Medical School',
+              meta: 'Research Collaborator · Jul 2026 – Present',
+              tag: 'Research',
+              points: [
+                'Building a deep learning pipeline with Dr. Xiangrui Zeng to improve temporal consistency of cortical thickness measurements across longitudinal MRI timepoints.',
+                'Handling ADNI preprocessing and MRI–PET integration, with a focus on layer-specific cortical segmentation (supragranular and infragranular).',
+              ],
+              links: [],
+            },
+            {
               title: 'Differential Capital PTY LTD',
-              meta: 'Data Science Intern & Research Collaborator · Dec 2025 – Present',
+              meta: 'Data Science Intern & Research Collaborator · Dec 2025 – Jun 2026',
               tag: 'Johannesburg',
               points: [
-                'Developed and maintained ETL pipelines for retail web-scraper infrastructure; built a monitoring dashboard tracking data-quality metrics and pipeline health.',
-                'Conducted EDA on historical scraped data, documenting schema inconsistencies and improving scraper robustness with better error handling and validation.',
-                'Research: developing CAE-KAN for interpretable equity valuation on the JSE; introduced the Valuation Curvature Signal (working paper in preparation).',
+                'Built a LightGBM-based machine valuation model on Refinitiv DataStream fundamentals for JSE equities, independently mapping 200+ features from a published quant research framework.',
+                'Research: developed CAE-KAN for interpretable equity valuation on the JSE, introducing a Valuation Curvature Signal (VCS) for per-factor regime attribution (working paper).',
               ],
               links: [],
             },
@@ -268,7 +294,7 @@ window.SITE = {
               meta: 'Freelance · Jan 2025 – Feb 2026',
               tag: 'Top 15% · 5★',
               points: [
-                'Delivered two full-stack apps (Flutter, Next.js, Firebase) to international clients with 5-star feedback.',
+                'Delivered two production full-stack applications (Flutter, Next.js, Firebase) for international clients with 5-star feedback.',
                 'Earned the Rising Talent badge — top 15% in the industry.',
               ],
               links: [],
@@ -313,18 +339,18 @@ window.SITE = {
       icon: 'cv',
       col: 2,
       summary: {
-        stat: '3.54',
+        stat: '3.56',
         statLabel: 'CGPA / 4.0',
         points: [
           'Univ. of Moratuwa — CS & Engineering',
-          'A/L Z-score 2.21 — top 1.67% in SL',
+          'A/L Z-score 2.2108 — top 1.67% in SL',
           'Full record + PDF download',
         ],
       },
       page: {
         kicker: '04 — Curriculum Vitae',
         title: 'CV / Résumé',
-        lede: 'The full record — education, skills, awards, and certifications. Download the PDF for the complete version.',
+        lede: 'A one-page summary — education, publications, experience, and skills. Download the PDF for the CV.',
         blocks: [
           { type: 'links', items: [{ label: '↓ Download CV (PDF)', url: 'uploads/cv.pdf' }] },
           { type: 'heading', text: 'Education' },
@@ -332,26 +358,25 @@ window.SITE = {
             {
               title: 'University of Moratuwa',
               meta: 'BSc (Hons) in Engineering — CS & Engineering, Data Science stream · Mar 2022 – Present',
-              tag: 'CGPA 3.54 / 4.0 · Second Upper',
-              points: ['Coursework: Deep Neural Networks, Calculus, Operational Research, Data Structures & Algorithms, Database Systems.'],
+              tag: 'CGPA 3.56 / 4.0',
+              points: ['Specialization: Computer Science and Engineering · Stream: Data Science and Engineering.'],
               links: [],
             },
             {
               title: 'St. Peter\'s College — GCE Advanced Level',
               meta: 'Physics, Chemistry, Combined Maths · Jan 2019 – Jan 2022',
-              tag: 'Z-score 2.21 · top 1.67% in SL',
-              points: ['Distinctions (A) in all three subjects. O/Ls: 9 A\'s.'],
+              tag: 'Z-score 2.2108 · top 1.67% in SL',
+              points: ['Distinction (A) in Physics, Chemistry, Combined Mathematics.'],
               links: [],
             },
           ]},
           { type: 'heading', text: 'Skills' },
           { type: 'skills', groups: [
-            { name: 'ML & Deep Learning', items: ['PyTorch', 'Scikit-learn', 'Reinforcement Learning (PPO, DreamerV3)', 'Probing & Interpretability', 'Conformal Inference', 'SHAP', 'Ensemble Methods', 'Time Series'] },
-            { name: 'Optimization & RL', items: ['Deep RL', 'Model-Based RL', 'RegressorChain', 'Optuna', 'Multi-Horizon Forecasting', 'Combinatorial Optimization'] },
-            { name: 'Languages', items: ['Python', 'R', 'SQL', 'Dart', 'TypeScript', 'JavaScript', 'Java', 'C++'] },
-            { name: 'Data Science', items: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Feature Engineering', 'Statistical Modeling', 'Causal Tracing'] },
-            { name: 'Web & Mobile', items: ['Flutter', 'Next.js', 'React.js', 'Node.js', 'FastAPI', 'Laravel'] },
-            { name: 'Data & Cloud', items: ['MySQL', 'PostgreSQL', 'Firebase', 'Supabase', 'GCP'] },
+            { name: 'Mechanistic Interpretability', items: ['Linear Probing', 'Activation Editing', 'Causal Tracing', 'PCA-based Direction Analysis', 'Representational Similarity Analysis (RSA)'] },
+            { name: 'Model Control & Steering', items: ['Activation Steering', 'Ablation Studies', 'Empirical Null Testing', 'Cross-domain Generalization Analysis'] },
+            { name: 'Model-based RL & Uncertainty', items: ['DreamerV3 Latent Analysis', 'Ensemble Disagreement Estimation', 'Conformal Inference (Adaptive, Mondrian)'] },
+            { name: 'Interpretable Architectures', items: ['KAN (B-spline) Decoders', 'Sparse / Conditional Autoencoders'] },
+            { name: 'Computing', items: ['Python', 'PyTorch', 'R', 'SQL', 'TypeScript', 'JavaScript', 'Java', 'C++', 'Dart', 'Flutter', 'Next.js', 'Git'] },
           ]},
           { type: 'heading', text: 'Honors & awards' },
           { type: 'entries', items: [
