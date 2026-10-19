@@ -22,6 +22,7 @@ function Icon({ name }) {
 const SOCIAL = {
   github: { label: 'GitHub', path: 'M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.4 9.4 0 0 1 12 7.07c.85 0 1.71.12 2.51.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.81 0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.26C22 6.58 17.52 2 12 2z' },
   linkedin: { label: 'LinkedIn', path: 'M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V9.99H5.67v8.35h2.67zM7 8.8a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.54v-4.57c0-2.45-1.31-3.59-3.06-3.59-1.41 0-2.04.78-2.39 1.32v-1.13h-2.67c.04.75 0 8.35 0 8.35h2.67v-4.66c0-.24.02-.48.09-.65.19-.48.63-.97 1.37-.97.97 0 1.36.74 1.36 1.82v4.46h2.63z' },
+  scholar: { label: 'Google Scholar', path: 'M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z' },
   researchgate: { label: 'ResearchGate', path: 'M15.1 2H8.9C5.1 2 2 5.1 2 8.9v6.2C2 18.9 5.1 22 8.9 22h6.2c3.8 0 6.9-3.1 6.9-6.9V8.9C22 5.1 18.9 2 15.1 2zm-1.36 13.36-1.5-2.4c-.18-.29-.36-.46-.5-.55-.13-.08-.32-.12-.56-.12h-.5v3.07H8.9V7.6h2.96c1.02 0 1.79.23 2.32.7.52.46.79 1.1.79 1.9 0 .62-.17 1.14-.5 1.55-.27.34-.64.59-1.1.74.25.13.5.4.74.79l1.62 2.58h-1.99zm-1.96-6.27h-1.1v2.06h1.1c.46 0 .8-.09 1.02-.27.22-.18.33-.45.33-.79 0-.33-.11-.58-.32-.75-.21-.17-.55-.25-1.03-.25z' },
 };
 function SocialIcon({ path }) {
@@ -658,6 +659,7 @@ function NetworkView({ onOpen }) {
               {pr.links.github ? <a href={pr.links.github} target="_blank" rel="noreferrer" aria-label="GitHub"><SocialIcon path={SOCIAL.github.path} /></a> : null}
               {pr.links.linkedin ? <a href={pr.links.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><SocialIcon path={SOCIAL.linkedin.path} /></a> : null}
               {pr.links.researchgate ? <a href={pr.links.researchgate} target="_blank" rel="noreferrer" aria-label="ResearchGate"><SocialIcon path={SOCIAL.researchgate.path} /></a> : null}
+              {pr.links.scholar ? <a href={pr.links.scholar} target="_blank" rel="noreferrer" aria-label="Google Scholar"><SocialIcon path={SOCIAL.scholar.path} /></a> : null}
             </div>
           </header>
 
@@ -729,6 +731,7 @@ function NetworkView({ onOpen }) {
               {pr.links.github ? <a href={pr.links.github} target="_blank" rel="noreferrer" aria-label="GitHub" data-tip="GitHub"><SocialIcon path={SOCIAL.github.path} /></a> : null}
               {pr.links.linkedin ? <a href={pr.links.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" data-tip="LinkedIn"><SocialIcon path={SOCIAL.linkedin.path} /></a> : null}
               {pr.links.researchgate ? <a href={pr.links.researchgate} target="_blank" rel="noreferrer" aria-label="ResearchGate" data-tip="ResearchGate"><SocialIcon path={SOCIAL.researchgate.path} /></a> : null}
+              {pr.links.scholar ? <a href={pr.links.scholar} target="_blank" rel="noreferrer" aria-label="Google Scholar" data-tip="Google Scholar"><SocialIcon path={SOCIAL.scholar.path} /></a> : null}
             </div>
           </div>
 
