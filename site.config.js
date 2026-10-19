@@ -87,9 +87,9 @@ window.SITE = {
         lede: 'My research centers on mechanistic interpretability, using linear probing, activation editing, and causal tracing to recover latent features that neural networks encode internally but never express behaviorally. I\'m particularly interested in how models reason and why they fail, and in using that understanding to build foundation models that not only perform better, but are safer and better aligned with human intent. I am also beginning to extend this work to vision-language models.',
         blocks: [
           { type: 'stats', items: [
-            { n: '3', label: 'peer-reviewed' },
-            { n: '2', label: 'accepted · IJCAI-ECAI 2026' },
-            { n: '1', label: 'working paper' },
+            { n: '1', label: 'Conference paper' },
+            { n: '2', label: 'Workshop papers' },
+            { n: '1', label: 'Working paper' },
           ]},
           { type: 'heading', text: 'Research experience' },
           { type: 'entries', items: [
