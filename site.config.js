@@ -73,11 +73,11 @@ window.SITE = {
       icon: 'research',
       col: 1,
       summary: {
-        stat: '4',
+        stat: '3',
         statLabel: 'publications',
         keywords: ['mechanistic interpretability', 'linear probing', 'activation editing', 'causal tracing'],
         points: [
-          '2 accepted · 2 workshop papers',
+          '2 workshop papers · 1 conference paper',
           'Xu Lab — CMU & Harvard Medical School',
         ],
       },
@@ -302,7 +302,7 @@ window.SITE = {
     /* ===== CV ===== */
     {
       id: 'cv',
-      label: 'CV / Résumé',
+      label: 'CV',
       accent: 'blue',
       icon: 'cv',
       col: 2,
@@ -317,7 +317,7 @@ window.SITE = {
       },
       page: {
         kicker: '04 — Curriculum Vitae',
-        title: 'CV / Résumé',
+        title: 'CV',
         lede: 'A one-page summary — education, publications, experience, and skills. Download the PDF for the CV.',
         blocks: [
           { type: 'links', items: [{ label: '↓ Download CV (PDF)', url: 'uploads/cv.pdf' }] },
